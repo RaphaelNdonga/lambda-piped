@@ -14,4 +14,4 @@ phases:
   build:
     commands:
       - echo "Deploying SAM application"
-      - sam deploy --no-confirm-changeset --no-fail-on-empty-changeset --stack-name lambda-piped --s3-bucket lambda-piped --capabilities CAPABILITY_IAM
+      - sam deploy --stack-name lambda-piped --s3-bucket lambda-piped
