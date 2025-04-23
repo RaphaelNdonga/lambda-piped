@@ -14,4 +14,4 @@ phases:
   build:
     commands:
       - echo "Deploying SAM application"
-      - sam deploy --stack-name lambda-piped --s3-bucket lambda-piped
+      - sam deploy --stack-name lambda-piped
