@@ -1,0 +1,16 @@
+AWSTemplateFormatVersion: "2010-09-09"
+Transform: AWS::Serverless-2016-10-31
+Description: SAM Template to deploy a Lambda function
+
+Resources:
+  MyLambdaFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: lambda-piped-fn
+      Handler: main.lambda_handler
+      Runtime: python3.9
+      CodeUri: .
+      Timeout: 15
+      MemorySize: 128
+      Policies:
+        - AWSLambdaBasicExecutionRole
