@@ -14,4 +14,4 @@ phases:
   build:
     commands:
       - echo "Deploying SAM application"
-      - sam deploy --stack-name lambda-piped --region eu-west-1
+      - sam deploy --stack-name lambda-piped-2 --region eu-west-1
