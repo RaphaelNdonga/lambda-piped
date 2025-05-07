@@ -1,1 +1,1 @@
-{"errorMessage": "'reservation'", "errorType": "KeyError", "requestId": "73ac8b6e-1383-4d49-9ccb-7c26a49c82f0", "stackTrace": ["  File \"/var/task/main.py\", line 8, in lambda_handler\n    for reservation in response[\"reservation\"]:\n"]}
+{"statusCode": 200, "body": "\"instances: []\""}

@@ -7,7 +7,7 @@ def lambda_handler(event, context):
     instance_states=[]
     for reservation in response["Reservations"]:
         for instance in reservation["Instances"]:
-            instance_states.append(instance['State']['Name'] == 'running')
+            instance_states.append(instance['State']['Name'])
     return {
         "statusCode": 200,
         "body": json.dumps(f'instances: {instance_states}')
