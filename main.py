@@ -20,7 +20,7 @@ def lambda_handler(event, context):
             print(instance_state)
             uptime = datetime.datetime.now(tz=launch_time.tzinfo) - launch_time
             uptime_minutes = uptime.total_seconds()/60
-            if float(uptime_minutes) > MAX_UPTIME_MINS:
+            if float(uptime_minutes) > MAX_UPTIME_MINS and instance_state=="running":
                 message=f'You cannot afford to have instance {instance_id} running any longer. It\'s been up for {uptime_minutes} minutes'
                 sns_client.publish(
                     TopicArn=TOPIC_ARN,
