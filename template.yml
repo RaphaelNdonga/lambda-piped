@@ -16,6 +16,7 @@ Resources:
         - AWSLambdaBasicExecutionRole
         - AmazonEC2ReadOnlyAccess
         - AmazonSNSFullAccess
+        - AmazonEventBridgeSchedulerFullAccess
   TriggerEventScheduler:
     Type: AWS::Serverless::Function
     Properties:
