@@ -27,5 +27,5 @@ Resources:
       MemorySize: 128
       Policies:
         - AWSLambdaBasicExecutionRole
-        - AmazonEventBridgeFullAccess
+        - AmazonEventBridgeSchedulerFullAccess
 
