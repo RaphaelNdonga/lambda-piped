@@ -8,6 +8,7 @@ def lambda_handler(event, context):
     current = scheduler_client.get_schedule(
         Name=SCHEDULE_NAME
     )
+    print(event)
     response = scheduler_client.update_schedule(
         Name=SCHEDULE_NAME,
         FlexibleTimeWindow=current["FlexibleTimeWindow"],
