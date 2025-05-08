@@ -13,7 +13,7 @@ def lambda_handler(event, context):
         FlexibleTimeWindow=current["FlexibleTimeWindow"],
         ScheduleExpression=current["ScheduleExpression"],
         Target=current["Target"],
-        State="ENABLED"
+        State=event.scheduled_state
     )
     return {
         "statusCode": 200,
