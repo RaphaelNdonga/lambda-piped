@@ -16,3 +16,16 @@ Resources:
         - AWSLambdaBasicExecutionRole
         - AmazonEC2ReadOnlyAccess
         - AmazonSNSFullAccess
+  TriggerEventScheduler:
+    Type: AWS::Serverless::Function
+    Properties:
+      FunctionName: trigger-eventscheduler
+      Handler: trigger_eventscheduler.lambda_handler
+      Runtime: python3.12
+      CodeUri: .
+      Timeout: 15
+      MemorySize: 128
+      Policies:
+        - AWSLambdaBasicExecutionRole
+        - AmazonEventBridgeFullAccess
+
