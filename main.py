@@ -9,10 +9,10 @@ TOPIC_ARN="arn:aws:sns:eu-west-1:266735808339:ec2-uptime-alert"
 SUBJECT="[WARNING]: Excessive usage of EC2 Instance" 
 ec2_client = boto3.client("ec2")
 MAX_UPTIME_MINS=0
-running_instances=[]
 
 def lambda_handler(event, context):
     response = ec2_client.describe_instances()
+    running_instances=[]
     for reservation in response["Reservations"]:
         for instance in reservation["Instances"]:
             instance_id = instance["InstanceId"]
